@@ -1,0 +1,9 @@
+package services.interfaces;
+import java.util.List;
+public interface ICRUD {
+    <T> List<T> getAll(String query, Class<T> clazz);
+    <T> void insert (T entity);
+    <T> void update(T entity);
+    <T> void delete(T entity);
+    <T> T findById(String id, Class<T> clazz);
+}
